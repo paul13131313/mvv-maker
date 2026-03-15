@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MVVメーカー | 御社のVISIONはどこから？",
     description: "いくつかの質問に答えるだけで、AIがミッション・ビジョン・バリュー・パーパスを生成します",
-    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    images: [{ url: "https://og-api-self.vercel.app/api/og?title=MVV%20MAKER&category=AI%20Tools", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -28,6 +28,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="antialiased">
         {children}
