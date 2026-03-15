@@ -178,7 +178,7 @@ export default function CreatePage() {
               placeholder={current.placeholder}
               className="w-full border-b-2 border-gray-200 focus:border-navy outline-none text-lg py-3 transition-colors bg-transparent text-navy placeholder:text-gray-300"
               onKeyDown={(e) => {
-                if (e.key === "Enter" && canProceed()) {
+                if (e.key === "Enter" && !e.nativeEvent.isComposing && canProceed()) {
                   if (step === totalSteps - 1) {
                     handleGenerate();
                   } else {
